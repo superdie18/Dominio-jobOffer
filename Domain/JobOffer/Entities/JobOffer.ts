@@ -8,7 +8,7 @@ export class jobOffer{
     private salary: number;
     private skills: string;
     private vacants: number;
-    private likes?: JobOfferLike;
+    private _likes!: JobOfferLike;
     private ispublished:boolean;
     private isSuspended: boolean;
     private complaints: string;
@@ -27,4 +27,13 @@ export class jobOffer{
 		this.isSuspended = isSuspended;
 		this.complaints = complaints;
 	}
+
+    public get likes(): JobOfferLike {
+        return this._likes;
+      }
+      public set likes(value: JobOfferLike) {
+        this._likes = value;
+      }
+
+//Nota: revisar porque se necesita que el ! que significa que la variable no puede ser null o es undefined
 }

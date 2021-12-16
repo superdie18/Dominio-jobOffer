@@ -1,10 +1,23 @@
-export class JobOfferLike{
-    private id: string;
-    private value: boolean;
+import { ID } from "../ValueObjects/JobOfferLikeId";
 
-	constructor(id: string, value: boolean) {
-		this.id = id;
-		this.value = value;
+export class JobOfferLike{
+    private _id!: ID;
+    private _value: boolean = true;
+
+
+	public get id(): ID {
+		return this._id;
+	  }
+	public set id(value: ID) {
+		this._id = value;
+	}
+
+	public get value(): boolean {
+		return this._value;
+	}
+	public set value(value: boolean) {
+		this._value = value;
 	}
 
 }
+
