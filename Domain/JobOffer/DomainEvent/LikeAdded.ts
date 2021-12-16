@@ -8,5 +8,4 @@ export class LikeAdded_DomainEvent {
     jobOfferLiked(jobOfferid: JobOfferLike){
             
     }
-
 }

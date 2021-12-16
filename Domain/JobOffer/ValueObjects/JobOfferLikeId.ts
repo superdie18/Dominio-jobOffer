@@ -1,7 +1,7 @@
 import { ValueObject } from "../../ValueObjects/ValueObjetcts";
 
 interface IDProps {
-  value: number;
+  value: string;
 }
 
 export class ID extends ValueObject<IDProps> {
@@ -9,11 +9,12 @@ export class ID extends ValueObject<IDProps> {
     super(props);
   }
 
-  get value(): number {
+  get value(): string {
     return this.props.value;
   }
 
-  public static create(value: number): ID {
+  public static create(value: string): ID {
     return new ID({ value: value });
   }
+// Tal vez debe ir en shared porque es general para los ID
 }

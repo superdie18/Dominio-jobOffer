@@ -19,7 +19,5 @@ export class JobOfferLike{
 		this._value = value;
 	}
 
-	jobOfferLiked(id: string);
-
 }
 
