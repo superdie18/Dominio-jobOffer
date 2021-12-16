@@ -2,7 +2,7 @@ import { ID } from "../ValueObjects/JobOfferLikeId";
 
 export class JobOfferLike{
     private _id!: ID;
-    private _value: boolean = true;
+    private _value: boolean = false;
 
 
 	public get id(): ID {
@@ -18,6 +18,8 @@ export class JobOfferLike{
 	public set value(value: boolean) {
 		this._value = value;
 	}
+
+	jobOfferLiked(id: string);
 
 }
 
