@@ -102,3 +102,6 @@ dist
 
 # Archivo de puerto TernJS
 .puerto de popa
+
+# dependencies
+/node_modules
