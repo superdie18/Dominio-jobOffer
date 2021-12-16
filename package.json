@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/superdie18/Dominio-jobOffer#readme",
   "dependencies": {
+    "shallow-equal": "^1.2.1",
+    "shallow-equal-object": "^1.1.1",
     "shallowequal": "^1.1.0"
   }
 }
