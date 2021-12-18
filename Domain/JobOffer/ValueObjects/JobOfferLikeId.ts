@@ -5,7 +5,7 @@ interface IDProps {
 }
 
 export class ID extends ValueObject<IDProps> {
-  private constructor(props: IDProps) {
+  public constructor(props: IDProps) {
     super(props);
   }
 
@@ -16,5 +16,5 @@ export class ID extends ValueObject<IDProps> {
   public static create(value: string): ID {
     return new ID({ value: value });
   }
-// Tal vez debe ir en shared porque es general para los ID
+
 }
