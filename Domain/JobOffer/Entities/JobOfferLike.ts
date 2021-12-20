@@ -1,22 +1,35 @@
-import { ID } from "../ValueObjects/JobOfferLikeId";
+import IDomainEvent from "../../../shared/domain/IDomainEvent";
+
+import LikeAdded_book from "../DomainEvent/LikeAdded_book";
+import JobOfferLikedId from "../ValueObjects/JobOfferLikeId";
+
+
+
 
 export class JobOfferLike{
-    private _id!: ID;
-    private _value: boolean = true;
+	private eventRecorder: IDomainEvent[] = [];
 
+	constructor(public id: JobOfferLikedId,
+    			private value: boolean){};
 
-	public get id(): ID {
-		return this._id;
-	  }
-	public set id(value: ID) {
-		this._id = value;
+	public getEvents(){
+		return this.eventRecorder;
 	}
 
-	public get value(): boolean {
-		return this._value;
+	public addEvent(domainEvent: JobOfferLikedId){
+		this.eventRecorder.push(domainEvent);
 	}
-	public set value(value: boolean) {
-		this._value = value;
+
+	static aggreeliked(id: JobOfferLikedId){
+		const test = new JobOfferLike(id, true);
+		test.eventRecorder.push(new LikeAdded_book(id, true))
+		return test;
+	}
+	
+	static removeLiked(id: JobOfferLikedId){
+		const test = new JobOfferLike(id, false);
+		test.eventRecorder.push(new LikeAdded_book(id, true))
+		return test;
 	}
 
 }
