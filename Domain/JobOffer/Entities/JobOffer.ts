@@ -5,7 +5,7 @@ import { JobOfferLike } from "./JobOfferLike";
 export default class jobOffer<S extends OfferStatus> extends Entity{
   private eventRecorder: IDomainEvent[] = [];
   public status: S;
-
+  
   constructor(
     public  likes: JobOfferLike, 
     status: S)
@@ -21,3 +21,4 @@ export default class jobOffer<S extends OfferStatus> extends Entity{
     this.eventRecorder.push(domainEvent);
   }
 }
+
