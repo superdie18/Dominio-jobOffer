@@ -1,8 +1,9 @@
 import IDomainEvent from "../../../shared/domain/IDomainEvent";
 import { IlikeAdded } from "../DomainEvent/ILikeAdded_DomainEvent";
 import LikeAdded_book from "../DomainEvent/LikeAdded_book";
+import JobOfferLikedId from "../ValueObjects/JobOfferLikeId";
 
-import { ID } from "../ValueObjects/JobOfferLikeId";
+
 
 
 export class JobOfferLike{
@@ -13,7 +14,7 @@ export class JobOfferLike{
 		this._id = _id;
 		this._value = _value ;
 	}
-*/	constructor(public id: ID,
+*/	constructor(public id: JobOfferLikedId,
     			private value: boolean){};
 /*				
 	public get id(): string {
@@ -35,18 +36,20 @@ export class JobOfferLike{
 		return this.eventRecorder;
 	}
 
-	public addEvent(domainEvent: IDomainEvent){
+	public addEvent(domainEvent: JobOfferLikedId){
 		this.eventRecorder.push(domainEvent);
 	}
 
-	static aggreeliked(id: ID){
+	static aggreeliked(id: JobOfferLikedId){
 		const test = new JobOfferLike(id, true);
-		test.addEvent(new LikeAdded_book(id, true))
+		test.eventRecorder.push(new LikeAdded_book(id, true))
+		return test;
 	}
 	
-	public removeLiked(id: ID){
-		const test = new JobOfferLike(id, true);
-		test.addEvent(new LikeAdded_book(id, true))
+	static removeLiked(id: JobOfferLikedId){
+		const test = new JobOfferLike(id, false);
+		test.eventRecorder.push(new LikeAdded_book(id, true))
+		return test;
 	}
 
 }

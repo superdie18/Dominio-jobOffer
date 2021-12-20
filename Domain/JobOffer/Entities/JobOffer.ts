@@ -17,7 +17,9 @@ export default class jobOffer<S extends OfferStatus> extends Entity{
     //private isSuspended: boolean;
     //private complaints: string;
 
-constructor(public  likes: JobOfferLike, status: S)
+constructor(
+  public  likes: JobOfferLike, 
+  status: S)
 {
   super();    
   this.status =  status;

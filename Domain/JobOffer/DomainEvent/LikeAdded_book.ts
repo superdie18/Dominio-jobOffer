@@ -1,12 +1,13 @@
 import IDomainEvent from "../../../shared/domain/IDomainEvent";
-import { ID } from "../ValueObjects/JobOfferLikeId";
+import JobOfferLikedId from "../ValueObjects/JobOfferLikeId";
+
 
 export default class LikeAdded_book implements IDomainEvent{
     /*publicprivate _id!: string;
     private value!: boolean;*/
 
-    constructor(public id: ID,
-        private value: boolean){}
+    constructor(public id: JobOfferLikedId,
+        public value: boolean){}
 /*	public get id(): string {
 		return this._id;
 	  }
