@@ -1,5 +1,5 @@
 import { Entity } from "../../../shared/Domain/Entity";
-import IDomainEvent from "../../../shared/domain/IDomainEvent";
+import IDomainEvent from "../../../shared/Domain/IDomainEvent";
 
 import { JobOfferLike } from "./JobOfferLike";
 
