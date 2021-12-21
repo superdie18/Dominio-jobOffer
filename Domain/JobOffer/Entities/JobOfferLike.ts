@@ -32,6 +32,7 @@ export class JobOfferLike{
 		return test;
 	}
 
-// Esta linea esta exrita en la rama CU7
+// Esta linea esta exrita en la rama principalx2
+
 }
 
