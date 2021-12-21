@@ -1,5 +1,4 @@
-import IDomainEvent from "../../../shared/domain/IDomainEvent";
-
+import IDomainEvent from "../../../shared/Domain/IDomainEvent";
 import LikeAdded_book from "../DomainEvent/LikeAdded_book";
 import JobOfferLikedId from "../ValueObjects/JobOfferLikeId";
 
