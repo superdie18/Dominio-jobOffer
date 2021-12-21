@@ -1,6 +1,6 @@
 import { JobOfferLike } from "../Domain/JobOffer/Entities/JobOfferLike";
 import JobOfferLikedId from "../Domain/JobOffer/ValueObjects/JobOfferLikeId";
-import UniqueId from "../shared/domain/UniqueUUID";
+import UniqueId from "../shared/Domain/UniqueUUID";
 
 describe('Value Object likeID', () =>{
 	test('Should return the happy path (instance)',() =>{

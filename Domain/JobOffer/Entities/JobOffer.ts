@@ -1,5 +1,6 @@
 import { Entity } from "../../../shared/Domain/Entity";
-import IDomainEvent from "../../../shared/Domain/IDomainEvent";
+import IDomainEvent from "../../../shared/domain/IDomainEvent";
+
 import { JobOfferLike } from "./JobOfferLike";
 
 export default class jobOffer<S extends OfferStatus> extends Entity{

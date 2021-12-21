@@ -1,6 +1,7 @@
 import { likedIdEmpty } from "../Domain/JobOffer/Errors/ErrorLikedId";
 import JobOfferLikedId from "../Domain/JobOffer/ValueObjects/JobOfferLikeId";
-import UniqueId from "../shared/domain/UniqueUUID";
+import UniqueId from "../shared/Domain/UniqueUUID";
+
 
 describe('Value Object likeID', () =>{
 	test('Should return a error: likeIDEmpty',() =>{
