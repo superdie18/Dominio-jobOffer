@@ -22,5 +22,7 @@ export default class jobOffer<S extends OfferStatus> extends Entity{
     this.eventRecorder.push(domainEvent);
   }
   // Esta linea esta exrita en la rama principalx2
+  // Esta linea esta exrita en la rama principalx2
+// Esta linea esta exrita en la rama principalx2
 }
 
