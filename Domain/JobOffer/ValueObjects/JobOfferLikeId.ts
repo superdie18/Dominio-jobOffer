@@ -29,5 +29,6 @@ export default class JobOfferLikedId implements IValueObject {
   
       return new JobOfferLikedId (id);
   }
-
+// Esta linea esta exrita en la rama principalx2
+// Esta linea esta exrita en la rama principalx2
 }
