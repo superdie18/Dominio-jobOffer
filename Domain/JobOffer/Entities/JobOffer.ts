@@ -21,5 +21,6 @@ export default class jobOffer<S extends OfferStatus> extends Entity{
   public addEvent(domainEvent: IDomainEvent){
     this.eventRecorder.push(domainEvent);
   }
+  // Esta linea esta exrita en la rama principalx2
 }
 
