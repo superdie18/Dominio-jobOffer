@@ -24,5 +24,6 @@ export default class jobOffer<S extends OfferStatus> extends Entity{
   // Esta linea esta exrita en la rama principalx2
   // Esta linea esta exrita en la rama principalx2
 // Esta linea esta exrita en la rama principalx2
+// Esta linea esta exrita en la rama principalx2
 }
 
