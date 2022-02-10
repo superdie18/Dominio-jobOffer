@@ -35,5 +35,6 @@ export class JobOfferLike{
 // Esta linea esta exrita en la rama principalx2
 // Esta linea esta exrita en la rama principalx2
 // Esta linea esta exrita en la rama principalx2
+// Esta linea esta exrita en la rama principalx2
 }
 
